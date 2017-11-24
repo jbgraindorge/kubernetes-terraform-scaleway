@@ -12,7 +12,7 @@ metadata:
   name: kubernetes-dashboard-rb
 subjects:
   - kind: ServiceAccount
-    name: kubernetes-dashboard
+    name: kubernetes-dashboard-sa
     namespace: kube-system
 roleRef:
   kind: ClusterRole
