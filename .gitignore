@@ -6,3 +6,4 @@
 !sample.terraform.tfvars
 !vars.tf
 !README.md
+!kubernetes-dashboard.yaml
