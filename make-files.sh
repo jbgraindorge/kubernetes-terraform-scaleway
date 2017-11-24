@@ -26,7 +26,7 @@ do
       kubeadm --token=\$KUBERNETES_TOKEN --apiserver-advertise-address=\$PUBLIC_IP --service-dns-domain=\$SUID.pub.cloud.scaleway.com init
 
       KUBECONFIG=/etc/kubernetes/admin.conf kubectl create -f http://docs.projectcalico.org/v2.3/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml
-      KUBECONFIG=/etc/kubernetes/admin.conf kubectl create -f https://git.io/kube-dashboard
+      KUBECONFIG=/etc/kubernetes/admin.conf kubectl create -f https://raw.githubusercontent.com/initd-daemon/kubernetes-terraform-scaleway/master/kubernetes-dashboard.yaml
       break
       ;;
     'slave')
