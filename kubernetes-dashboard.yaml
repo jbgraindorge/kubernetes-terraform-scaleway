@@ -2,17 +2,17 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
- name: kubernetes-dashboard-sa
+ name: kubernetes-dashboard
  namespace: kube-system
 ---
 # role binding
 apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
-  name: kubernetes-dashboard-rb
+  name: kubernetes-dashboard
 subjects:
   - kind: ServiceAccount
-    name: kubernetes-dashboard-sa
+    name: kubernetes-dashboard
     namespace: kube-system
 roleRef:
   kind: ClusterRole
@@ -62,7 +62,7 @@ spec:
       volumes:
       - name: tmp-volume
         emptyDir: {}
-      serviceAccountName: kubernetes-dashboard-sa
+      serviceAccountName: kubernetes-dashboard
       # Comment the following tolerations if Dashboard must not be deployed on master
       tolerations:
       - key: node-role.kubernetes.io/master
